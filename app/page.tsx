@@ -9,6 +9,8 @@ const Code = (props: PropsWithChildren<{}>) => (
   <code className={styles.inlineCode} {...props} />
 );
 
+console.log(vercel);
+
 const Index = () => (
   <div className={styles.container}>
     <ViewSource pathname="app/page.tsx" />
@@ -67,9 +69,9 @@ const Index = () => (
         This image is intentionally large so you have to scroll down to the next
         image.
       </p>
-      <Image
+      <img
         alt="Vercel logo"
-        src={vercel}
+        src={vercel.src}
         width={1000}
         height={1000}
         style={{
@@ -87,7 +89,7 @@ const Index = () => (
         External images must be configured in <Code>next.config.js</Code> using
         the <Code>remotePatterns</Code> property.
       </p>
-      <Image
+      <img
         alt="Next.js logo"
         src="https://assets.vercel.com/image/upload/v1538361091/repositories/next-js/next-js-bg.png"
         width={1200}
@@ -96,6 +98,7 @@ const Index = () => (
           maxWidth: "100%",
           height: "auto",
         }}
+        
       />
       <hr className={styles.hr} />
       <h2 id="more">Learn More</h2>
